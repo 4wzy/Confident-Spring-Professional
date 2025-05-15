@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "myFancyPdfInvoicesBruno",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

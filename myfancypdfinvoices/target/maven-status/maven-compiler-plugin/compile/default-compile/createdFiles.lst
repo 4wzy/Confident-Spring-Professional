@@ -1,0 +1,4 @@
+com/justingrosu/myfancypdfinvoices/web/MyFancyPdfInvoicesServlet.class
+com/justingrosu/myfancypdfinvoices/service/InvoiceService.class
+com/justingrosu/myfancypdfinvoices/ApplicationLauncher.class
+com/justingrosu/myfancypdfinvoices/model/Invoice.class

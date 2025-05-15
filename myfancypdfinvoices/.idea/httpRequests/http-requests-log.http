@@ -1,0 +1,30 @@
+POST http://localhost:8080/invoices?user_id=justinGrosu&amount=20
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+<> 2025-03-06T120515.200.json
+
+###
+
+POST http://localhost:8080/invoices?user_id=justinGrosu&amount=20
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+<> 2025-03-06T113356.200.json
+
+###
+
+POST http://localhost:8080/invoices?user_id=freddieFox&amount=50
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+<> 2025-03-06T113323.200.json
+
+###
+

@@ -1,0 +1,16 @@
+meta {
+  name: invoiceTest
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/invoices?user_id=freddieFox&amount=150
+  body: none
+  auth: inherit
+}
+
+params:query {
+  user_id: freddieFox
+  amount: 150
+}
