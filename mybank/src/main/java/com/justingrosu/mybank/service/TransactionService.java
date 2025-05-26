@@ -4,7 +4,7 @@ import com.justingrosu.mybank.model.Transaction;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -24,7 +24,8 @@ public class TransactionService {
         return transactions;
     }
 
-    public Transaction create(final int amount, final LocalDateTime timestamp, final String reference) {
+    public Transaction create(final int amount, final String reference) {
+        ZonedDateTime timestamp = ZonedDateTime.now();
         final Transaction transaction = new Transaction(UUID.randomUUID().toString(), amount, timestamp, reference, slogan);
         transactions.add(transaction);
         return transaction;

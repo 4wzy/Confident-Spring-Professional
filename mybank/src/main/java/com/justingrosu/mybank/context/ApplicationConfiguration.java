@@ -9,6 +9,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.validation.beanvalidation.MethodValidationPostProcessor;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -16,19 +18,10 @@ import java.time.format.DateTimeFormatter;
 @Configuration
 @ComponentScan(basePackageClasses = ApplicationLauncher.class)
 @PropertySource("classpath:/application.properties")
-public class MyBankApplicationConfiguration {
+@EnableWebMvc
+public class ApplicationConfiguration {
 
     @Bean
-    public ObjectMapper objectMapper() {
-        final JavaTimeModule javaTimeModule = new JavaTimeModule();
-        final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm'Z'");
-        javaTimeModule.addSerializer(LocalDateTime.class, new LocalDateTimeSerializer(formatter));
-
-        final ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.registerModule(javaTimeModule);
-        objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
-
-        return objectMapper;
-    }
+    public ObjectMapper objectMapper() { return new ObjectMapper().registerModule(new JavaTimeModule()); }
 
 }
